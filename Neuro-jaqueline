@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaqueline - Neuropsicopedagogia</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; scroll-behavior:smooth; }
+body { background:#f5f5f5; color:#333; }
+
+a { text-decoration:none; color:inherit; }
+
+nav {
+  position:fixed; top:0; width:100%; padding:15px 30px;
+  background: rgba(255,255,255,0.6); backdrop-filter: blur(10px);
+  display:flex; justify-content:space-between; align-items:center;
+  z-index:100; box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav .menu { display:flex; gap:20px; }
+nav .menu a { font-weight:600; transition:0.3s; }
+nav .menu a:hover { color:#3A7DFF; }
+
+.menu-toggle { display:none; font-size:1.5rem; cursor:pointer; }
+
+section { min-height:100vh; padding:100px 20px 60px; text-align:center; display:flex; justify-content:center; align-items:center; flex-direction:column; }
+.hero { 
+  background:url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1920') center/cover no-repeat;
+  position:relative;
+  color:#fff;
+}
+.hero .card {
+  background: rgba(255,255,255,0.15); backdrop-filter:blur(10px);
+  padding:40px; border-radius:20px; max-width:600px; text-align:center;
+  animation: fadeSlide 1s ease forwards; opacity:0;
+}
+@keyframes fadeSlide {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+.cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:30px; }
+.card-small {
+  background:#fff; padding:20px; border-radius:15px; min-width:150px; flex:1 1 150px;
+  transition:0.3s; box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+.card-small:hover { transform:scale(1.05); box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+
+form { display:flex; flex-direction:column; gap:15px; max-width:400px; background: rgba(255,255,255,0.15); backdrop-filter:blur(10px); padding:30px; border-radius:20px; }
+form input, form textarea { padding:10px; border-radius:10px; border:1px solid #ccc; }
+form button { background:#3A7DFF; color:#fff; padding:15px; border:none; border-radius:20px; cursor:pointer; font-weight:600; }
+form button:hover { background:#2a5fcc; }
+
+.whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:15px; border-radius:50%; font-size:25px; display:flex; justify-content:center; align-items:center; text-decoration:none; box-shadow:0 2px 10px rgba(0,0,0,0.3); }
+
+@media(max-width:768px){
+  nav .menu { display:none; flex-direction:column; position:fixed; top:0; right:-100%; background:rgba(255,255,255,0.95); height:100vh; width:60%; gap:30px; justify-content:center; padding:50px 20px; transition:0.3s; }
+  nav .menu.active { right:0; }
+  .menu-toggle { display:block; }
+  .cards { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<nav>
+  <div><strong>Jaqueline</strong></div>
+  <div class="menu">
+    <a href="#home">Home</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#agendar">Agendar</a>
+    <a href="#contato">Contato</a>
+  </div>
+  <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+</nav>
+
+<!-- Loader -->
+<div id="loader" style="position:fixed;inset:0;background:#fff;display:flex;justify-content:center;align-items:center;z-index:200;">
+  <h1>Carregando...</h1>
+</div>
+
+<!-- Home -->
+<section id="home" class="hero">
+  <div class="card">
+    <h1>Desenvolvendo o potencial de cada criança</h1>
+    <p>Crianças de 3 a 10 anos</p>
+    <div class="cards">
+      <div class="card-small">+3 anos de experiência</div>
+      <div class="card-small">Atendimento humanizado</div>
+      <div class="card-small">Foco no desenvolvimento</div>
+    </div>
+  </div>
+</section>
+
+<!-- Sobre -->
+<section id="sobre">
+  <h2>Sobre</h2>
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:20px;">
+    <img src="https://images.unsplash.com/photo-1586769852836-0cfd95f5e8fa?w=300" alt="Sobre" style="border-radius:20px;max-width:300px;">
+    <p style="max-width:500px;text-align:left;">Sou psicopedagoga especializada no desenvolvimento infantil, ajudando crianças a superarem dificuldades e evoluírem. Trabalho de forma lúdica e humanizada, priorizando aprendizagem e bem-estar.</p>
+  </div>
+</section>
+
+<!-- Serviços -->
+<section id="servicos">
+  <h2>Serviços</h2>
+  <div class="cards">
+    <div class="card-small">
+      <i class="fas fa-file-alt" style="font-size:25px;color:#3A7DFF;margin-bottom:10px;"></i>
+      <p>Avaliação psicopedagógica</p>
+    </div>
+    <div class="card-small">
+      <i class="fas fa-child" style="font-size:25px;color:#3A7DFF;margin-bottom:10px;"></i>
+      <p>Intervenção infantil</p>
+    </div>
+    <div class="card-small">
+      <i class="fas fa-school" style="font-size:25px;color:#3A7DFF;margin-bottom:10px;"></i>
+      <p>Apoio escolar</p>
+    </div>
+  </div>
+</section>
+
+<!-- Agendar -->
+<section id="agendar">
+  <h2>Agendar</h2>
+  <form id="agendamentoForm">
+    <input type="text" name="nome" placeholder="Nome" required>
+    <input type="number" name="idade" placeholder="Idade da criança" required>
+    <input type="date" name="data" required>
+    <input type="time" name="hora" required>
+    <textarea name="obs" placeholder="Observações"></textarea>
+    <button type="submit">Agendar via WhatsApp</button>
+  </form>
+</section>
+
+<!-- Contato -->
+<section id="contato">
+  <h2>Contato</h2>
+  <p>WhatsApp: <a href="https://wa.me/5548996461679"> (48) 99646-1679 </a></p>
+  <p>Instagram: <a href="https://instagram.com/neuropsicopedagogajaqueline">@neuropsicopedagogajaqueline</a></p>
+</section>
+
+<!-- WhatsApp flutuante -->
+<a class="whatsapp" href="https://wa.me/5548996461679"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+// Loader
+window.addEventListener('load', ()=>{ setTimeout(()=>{ document.getElementById('loader').style.display='none'; },1000); });
+
+// Menu Mobile
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+toggle.addEventListener('click', ()=>{ menu.classList.toggle('active'); });
+
+// SPA Smooth Scroll (simples)
+document.querySelectorAll('nav a').forEach(link=>{
+  link.addEventListener('click', e=>{
+    e.preventDefault();
+    const target=document.querySelector(link.getAttribute('href'));
+    target.scrollIntoView({behavior:'smooth'});
+    if(menu.classList.contains('active')) menu.classList.remove('active');
+  });
+});
+
+// Form WhatsApp
+document.getElementById('agendamentoForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const form = e.target;
+  const msg = `Olá, gostaria de agendar uma consulta!%0A%0A*Dados:*%0A- Nome: ${form.nome.value}%0A- Idade: ${form.idade.value}%0A- Data: ${form.data.value}%0A- Hora: ${form.hora.value}%0A- Observações: ${form.obs.value}`;
+  window.open(`https://wa.me/5548996461679?text=${msg}`, '_blank');
+});
+</script>
+
+</body>
+</html>
