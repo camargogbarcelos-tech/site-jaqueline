@@ -8,7 +8,7 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; scroll-behavior:smooth; }
@@ -144,7 +144,7 @@ form button:hover { background:#2a5fcc; }
 <!-- Contato -->
 <section id="contato">
   <h2>Contato</h2>
-  <p>WhatsApp: <a href="https://wa.me/5548996461679"> (48) 99646-1679 </a></p>
+  <p>WhatsApp: <a href="https://wa.me/5548996461679">(48) 99646-1679</a></p>
   <p>Instagram: <a href="https://instagram.com/neuropsicopedagogajaqueline">@neuropsicopedagogajaqueline</a></p>
 </section>
 
@@ -160,7 +160,7 @@ const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 toggle.addEventListener('click', ()=>{ menu.classList.toggle('active'); });
 
-// SPA Smooth Scroll (simples)
+// Smooth scroll
 document.querySelectorAll('nav a').forEach(link=>{
   link.addEventListener('click', e=>{
     e.preventDefault();
